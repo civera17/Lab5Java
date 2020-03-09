@@ -11,8 +11,9 @@ public class Main {
             Stack<Integer> stack1 = new Stack<>();
             stackMethods.stackFill(stack,5);
             stackMethods.stackFill(stack1,5);
-            stackMethods.flipStacks(stack,stack1);
-        } catch (Exception e) {
+            stackMethods.stackIterator(stackMethods.flipStack(stack));
+//            stackMethods.flipStacks(stack,stack1);
+        } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         } finally {
             System.out.println("End");

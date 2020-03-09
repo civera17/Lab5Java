@@ -44,4 +44,15 @@ public class StackMethods {
         System.out.println("Second :");
         stackIterator(second);
     }
+
+    public Stack<Integer> flipStack(Stack<Integer> stack){
+        stackIterator(stack);
+        ArrayList<Integer> temp = new ArrayList<>(stack);
+        stack.clear();
+        int size = temp.size();
+        for (int i = temp.size() - 1; i >= 0; i--) {
+            stack.push(temp.get(i));
+        }
+        return stack;
+    }
 }
